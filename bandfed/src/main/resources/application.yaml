@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    filter:
+      order: -100
+    user:
+      roles:
+        - admin
+        - user
+    jwt:
+      key: d2FpbGV3YWlsZWl3YWxlaXdhbGVpMjMzMjMyMzI=
+      expire: 7
+# MyBatis-Plus ??
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # ?? SQL ???????
+#  global-config:
+#    db-config:
+#      id-type: auto # ??????
+
+netty:
+  port: 8088
